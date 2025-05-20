@@ -1,0 +1,41 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory (por exemplo, de testes)
+coverage/
+
+# Ambiente local
+.env
+.env.test
+.env.*
+
+# Banco SQLite em disco (não usado aqui, mas útil prevenir)
+*.sqlite
+*.sqlite3
+
+# Editor e SO
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Arquivos temporários
+*.swp
+*.swo
+*.bak
+
+# Output do Jest
+jest-test-results.json
