@@ -7,6 +7,31 @@ beforeAll(async () => {
 
 describe('GET /awards', () => {
 
+    it('should return the exact expected result based on original CSV data', async () => {
+        const response = await request(app).get('/awards');
+
+        expect(response.statusCode).toBe(200);
+
+        expect(response.body).toEqual({
+            min: [
+                {
+                    producer: "Joel Silver",
+                    interval: 1,
+                    previousWin: 1990,
+                    followingWin: 1991
+                }
+            ],
+            max: [
+                {
+                    producer: "Matthew Vaughn",
+                    interval: 13,
+                    previousWin: 2002,
+                    followingWin: 2015
+                }
+            ]
+        });
+    });
+
     it('should return min and max intervals in correct format', async () => {
         const response = await request(app).get('/awards');
 
